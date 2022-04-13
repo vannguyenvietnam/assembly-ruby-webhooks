@@ -14,31 +14,13 @@ require 'date'
 require 'time'
 
 module AssemblyRubyWebhooks
-  class Job
-    attr_accessor :hashed_payload
-
-    attr_accessor :updated_at
-
-    attr_accessor :created_at
-
-    attr_accessor :payload
-
-    attr_accessor :webhook_uuid
-
-    attr_accessor :uuid
-
-    attr_accessor :request_responses
+  class WebhookSecretKeyParams
+    attr_accessor :secret_key
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'hashed_payload' => :'hashed_payload',
-        :'updated_at' => :'updated_at',
-        :'created_at' => :'created_at',
-        :'payload' => :'payload',
-        :'webhook_uuid' => :'webhook_uuid',
-        :'uuid' => :'uuid',
-        :'request_responses' => :'request_responses'
+        :'secret_key' => :'secret_key'
       }
     end
 
@@ -50,13 +32,7 @@ module AssemblyRubyWebhooks
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'hashed_payload' => :'String',
-        :'updated_at' => :'Time',
-        :'created_at' => :'Time',
-        :'payload' => :'JobPayload',
-        :'webhook_uuid' => :'String',
-        :'uuid' => :'String',
-        :'request_responses' => :'RequestResponses'
+        :'secret_key' => :'String'
       }
     end
 
@@ -70,43 +46,19 @@ module AssemblyRubyWebhooks
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `AssemblyRubyWebhooks::Job` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `AssemblyRubyWebhooks::WebhookSecretKeyParams` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `AssemblyRubyWebhooks::Job`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `AssemblyRubyWebhooks::WebhookSecretKeyParams`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'hashed_payload')
-        self.hashed_payload = attributes[:'hashed_payload']
-      end
-
-      if attributes.key?(:'updated_at')
-        self.updated_at = attributes[:'updated_at']
-      end
-
-      if attributes.key?(:'created_at')
-        self.created_at = attributes[:'created_at']
-      end
-
-      if attributes.key?(:'payload')
-        self.payload = attributes[:'payload']
-      end
-
-      if attributes.key?(:'webhook_uuid')
-        self.webhook_uuid = attributes[:'webhook_uuid']
-      end
-
-      if attributes.key?(:'uuid')
-        self.uuid = attributes[:'uuid']
-      end
-
-      if attributes.key?(:'request_responses')
-        self.request_responses = attributes[:'request_responses']
+      if attributes.key?(:'secret_key')
+        self.secret_key = attributes[:'secret_key']
       end
     end
 
@@ -128,13 +80,7 @@ module AssemblyRubyWebhooks
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          hashed_payload == o.hashed_payload &&
-          updated_at == o.updated_at &&
-          created_at == o.created_at &&
-          payload == o.payload &&
-          webhook_uuid == o.webhook_uuid &&
-          uuid == o.uuid &&
-          request_responses == o.request_responses
+          secret_key == o.secret_key
     end
 
     # @see the `==` method
@@ -146,7 +92,7 @@ module AssemblyRubyWebhooks
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [hashed_payload, updated_at, created_at, payload, webhook_uuid, uuid, request_responses].hash
+      [secret_key].hash
     end
 
     # Builds the object from hash

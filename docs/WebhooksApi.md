@@ -100,7 +100,7 @@ AssemblyRubyWebhooks.configure do |config|
 end
 
 api_instance = AssemblyRubyWebhooks::WebhooksApi.new
-uuid = TODO # String | ID of webhook to delete
+uuid = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | ID of webhook to delete
 
 begin
   # Delete Webhook by ID
@@ -133,7 +133,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **uuid** | [**String**](.md) | ID of webhook to delete |  |
+| **uuid** | **String** | ID of webhook to delete |  |
 
 ### Return type
 
@@ -311,7 +311,7 @@ AssemblyRubyWebhooks.configure do |config|
 end
 
 api_instance = AssemblyRubyWebhooks::WebhooksApi.new
-uuid = TODO # String | UUID of webhook to update
+uuid = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | UUID of webhook to update
 webhook_patch_params = AssemblyRubyWebhooks::WebhookPatchParams.new # WebhookPatchParams | 
 
 begin
@@ -345,7 +345,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **uuid** | [**String**](.md) | UUID of webhook to update |  |
+| **uuid** | **String** | UUID of webhook to update |  |
 | **webhook_patch_params** | [**WebhookPatchParams**](WebhookPatchParams.md) |  |  |
 
 ### Return type

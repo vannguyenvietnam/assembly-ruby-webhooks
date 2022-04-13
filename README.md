@@ -64,8 +64,8 @@ AssemblyRubyWebhooks.configure do |config|
 end
 
 api_instance = AssemblyRubyWebhooks::JobsApi.new
-uuid = TODO # String | ID of webhook
-job_uuid = TODO # String | ID of Job
+uuid = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | ID of webhook
+job_uuid = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | ID of Job
 
 begin
   #Show job associated to Webhook
@@ -91,6 +91,7 @@ Class | Method | HTTP request | Description
 *AssemblyRubyWebhooks::WebhooksApi* | [**get_all_webhooks**](docs/WebhooksApi.md#get_all_webhooks) | **GET** /webhooks | List Webhooks
 *AssemblyRubyWebhooks::WebhooksApi* | [**get_webhook_by_id**](docs/WebhooksApi.md#get_webhook_by_id) | **GET** /webhooks/{uuid} | Show Webhook
 *AssemblyRubyWebhooks::WebhooksApi* | [**update_webhook**](docs/WebhooksApi.md#update_webhook) | **PATCH** /webhooks/{uuid} | Update an existing Webhook
+*AssemblyRubyWebhooks::WebhooksSecretKeyApi* | [**create_webhook_secret_key**](docs/WebhooksSecretKeyApi.md#create_webhook_secret_key) | **POST** /webhooks/secret_key | Create a Webhooks secret_key
 
 
 ## Documentation for Models
@@ -105,6 +106,7 @@ Class | Method | HTTP request | Description
  - [AssemblyRubyWebhooks::WebhookLinks](docs/WebhookLinks.md)
  - [AssemblyRubyWebhooks::WebhookParams](docs/WebhookParams.md)
  - [AssemblyRubyWebhooks::WebhookPatchParams](docs/WebhookPatchParams.md)
+ - [AssemblyRubyWebhooks::WebhookSecretKeyParams](docs/WebhookSecretKeyParams.md)
  - [AssemblyRubyWebhooks::Webhooks](docs/Webhooks.md)
  - [AssemblyRubyWebhooks::WebhooksMeta](docs/WebhooksMeta.md)
 

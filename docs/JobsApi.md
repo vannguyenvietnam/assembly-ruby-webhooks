@@ -28,8 +28,8 @@ AssemblyRubyWebhooks.configure do |config|
 end
 
 api_instance = AssemblyRubyWebhooks::JobsApi.new
-uuid = TODO # String | ID of webhook
-job_uuid = TODO # String | ID of Job
+uuid = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | ID of webhook
+job_uuid = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | ID of Job
 
 begin
   # Show job associated to Webhook
@@ -62,8 +62,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **uuid** | [**String**](.md) | ID of webhook |  |
-| **job_uuid** | [**String**](.md) | ID of Job |  |
+| **uuid** | **String** | ID of webhook |  |
+| **job_uuid** | **String** | ID of Job |  |
 
 ### Return type
 
@@ -99,7 +99,7 @@ AssemblyRubyWebhooks.configure do |config|
 end
 
 api_instance = AssemblyRubyWebhooks::JobsApi.new
-uuid = TODO # String | ID of webhook
+uuid = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | ID of webhook
 opts = {
   limit: 56, # Integer | Number of records to retrieve. Up to 200.
   offset: 56, # Integer | Number of records to offset. Required for pagination.
@@ -137,7 +137,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **uuid** | [**String**](.md) | ID of webhook |  |
+| **uuid** | **String** | ID of webhook |  |
 | **limit** | **Integer** | Number of records to retrieve. Up to 200. | [optional][default to 10] |
 | **offset** | **Integer** | Number of records to offset. Required for pagination. | [optional][default to 0] |
 | **status** | **String** | Narrow down records per status | [optional][default to &#39;&#39;] |
